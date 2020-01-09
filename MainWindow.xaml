@@ -1,0 +1,46 @@
+﻿<Window x:Class="TicTocToeWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTocToeWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="400" WindowStartupLocation="CenterScreen" >
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="MyRed" Color="Red" Opacity="0.5"/>
+        <SolidColorBrush x:Key="MyBlack" Color="#DDFFFF" />
+
+
+        <ControlTemplate x:Key="EllipseTemplate" TargetType="Button">
+            <Ellipse Width="200" Height="50" Fill="{StaticResource MyRed}"  />
+
+
+        </ControlTemplate>
+
+        <Style x:Key="buttonStyle" TargetType="Button" >
+            <!--<Setter Property="OverridesDefaultStyle" Value="True"/>-->
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="IsDefault" Value="True"/>
+            <Setter Property="Background" Value="{StaticResource MyRed}"/>
+            <Setter Property="Foreground" Value="{StaticResource MyBlack}"/>
+            <Setter Property="FontSize" Value="35"/>
+            
+
+
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+
+        <Button Name="PLAY" Click="PLAY_Click"  HorizontalAlignment="Center" VerticalAlignment="Center"
+                 Width="299" Height="67" HorizontalContentAlignment="Center" Margin="57,205,37.333,98.667" 
+                Style = "{StaticResource buttonStyle}" RenderTransformOrigin="0.504,0.443" >
+
+                PLAY
+
+        </Button>
+
+
+    </Grid>
+</Window>
