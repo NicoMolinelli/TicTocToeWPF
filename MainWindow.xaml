@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTocToeWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="400" WindowStartupLocation="CenterScreen" >
+        Title="MainWindow" Height="400" Width="400" WindowStartupLocation="CenterScreen" Background="#FF72D5CC" >
 
     <Window.Resources>
         <SolidColorBrush x:Key="MyRed" Color="Red" Opacity="0.5"/>
@@ -25,19 +25,39 @@
             <Setter Property="Background" Value="{StaticResource MyRed}"/>
             <Setter Property="Foreground" Value="{StaticResource MyBlack}"/>
             <Setter Property="FontSize" Value="35"/>
-            
+            <Setter Property="Height" Value="70"/>
 
 
         </Style>
     </Window.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="244*"/>
+            <ColumnDefinition Width="149*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="TICTOCTOE" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" FontFamily="Snap ITC" Grid.ColumnSpan="2" Margin="60,86,59.333,84.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF1201ED" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
 
 
-        <Button Name="PLAY" Click="PLAY_Click"  HorizontalAlignment="Center" VerticalAlignment="Center"
-                 Width="299" Height="67" HorizontalContentAlignment="Center" Margin="57,205,37.333,98.667" 
-                Style = "{StaticResource buttonStyle}" RenderTransformOrigin="0.504,0.443" >
+        <Button Name="PLAY" Click="PLAY_Click" Width="299" Grid.Row="1"
+                Style = "{StaticResource buttonStyle}" RenderTransformOrigin="0.504,0.443" Grid.ColumnSpan="2" Margin="47,39.333,47.333,38.667" FontFamily="Rockwell Extra Bold" Foreground="#FF0D1B1B" >
+            <Button.Background>
+                <SolidColorBrush Color="#FF0E7AFF" Opacity="0.5"/>
+            </Button.Background>
 
-                PLAY
+            PLAY
 
         </Button>
 
