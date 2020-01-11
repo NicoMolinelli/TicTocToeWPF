@@ -147,30 +147,6 @@ namespace TicTocToeWPF
             btn22.IsEnabled = true;
             btn22.Background = Brushes.White;
         }
-        /*
-        public void AddInField(Dowel dowel)
-        {
-            Debug.WriteLine(moves.ToString());
-            Debug.WriteLine(dowel.Column.ToString() + "  " + dowel.Row.ToString());
-           /* if (moves < 5)
-            {
-                dowels[dowel.Column, dowel.Row] = dowel;
-
-            }
-            if (CheckWin())
-            {
-                MessageBox.Show("Vinto");
-            }
-            else if (moves == 9)
-            {
-                MessageBox.Show("Pareggio");
-            }
-            else
-            {
-                
-            }
-
-        }*/
 
         public bool CheckWin()
         {
@@ -239,10 +215,5 @@ namespace TicTocToeWPF
 
             return win;
          }
-
-        private void TbPlayer1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
  }
